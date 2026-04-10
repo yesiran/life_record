@@ -255,6 +255,101 @@
     border: 1px dashed #ddd5c8;
   }
 
+  /* Spot cards */
+  .spot-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 24px;
+  }
+
+  .spot-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .spot-card-body {
+    padding: 20px 24px;
+  }
+
+  .spot-card-name {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #2c1f14;
+    margin-bottom: 4px;
+  }
+
+  .spot-card-sub {
+    font-size: 0.8rem;
+    color: #b8a690;
+    margin-bottom: 10px;
+  }
+
+  .spot-card-desc {
+    font-size: 0.9rem;
+    color: #5c4a36;
+    line-height: 1.8;
+  }
+
+  .spot-card-highlight {
+    font-size: 0.82rem;
+    color: #8b6f47;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #f0ebe4;
+  }
+
+  .spot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 20px;
+  }
+
+  @media (max-width: 600px) {
+    .spot-grid { grid-template-columns: 1fr; }
+    .spot-card img { height: 180px; }
+  }
+
+  /* Temple special */
+  .temple-card {
+    background: linear-gradient(135deg, #faf8f5 0%, #f5efe6 100%);
+    border: 1px solid #e8e0d4;
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 24px;
+  }
+
+  .temple-card-name {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #2c1f14;
+    margin-bottom: 4px;
+  }
+
+  .temple-card-en {
+    font-size: 0.82rem;
+    color: #b8a690;
+    margin-bottom: 12px;
+  }
+
+  .temple-card-desc {
+    font-size: 0.9rem;
+    color: #5c4a36;
+    line-height: 1.9;
+  }
+
+  .temple-card-info {
+    font-size: 0.82rem;
+    color: #8b7a65;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #e0d5c7;
+    line-height: 1.8;
+  }
+
   /* Journal placeholder */
   .journal-placeholder {
     background: #fff;
@@ -465,10 +560,218 @@
   </div>
 </div>
 
+<!-- ============ 景点指南 ============ -->
+
+<div class="section">
+  <div class="section-title">柒 · 景点指南</div>
+
+  <h3 style="color:#8b6f47; font-weight:400; letter-spacing:0.15em; margin:32px 0 16px;">西雅图 · Olympic</h3>
+  <div class="spot-grid">
+    <div class="spot-card">
+      <img src="https://images.unsplash.com/photo-1516685125522-3c528b3e6bfa?w=800&q=80" alt="Hoh Rain Forest">
+      <div class="spot-card-body">
+        <div class="spot-card-name">Hoh Rain Forest 温带雨林</div>
+        <div class="spot-card-sub">Olympic National Park</div>
+        <div class="spot-card-desc">北美仅存的温带雨林。千年云杉和铁杉高耸入云，树干和枝条上挂满翠绿苔藓，地面铺着厚厚的蕨类。走在里面像进入了宫崎骏的异世界。</div>
+        <div class="spot-card-highlight">亮点：Hall of Mosses步道（0.8英里），全美独一份的温带雨林生态</div>
+      </div>
+    </div>
+    <div class="spot-card">
+      <img src="https://images.unsplash.com/photo-1568480289356-5a75d0fd47fc?w=800&q=80" alt="Rialto Beach">
+      <div class="spot-card-body">
+        <div class="spot-card-name">Rialto Beach & First Beach</div>
+        <div class="spot-card-sub">La Push, Olympic Peninsula</div>
+        <div class="spot-card-desc">太平洋海岸的野性之美。巨大的海蚀柱矗立在浪花中，漂木铺满海滩，日落时分天空燃烧成橙红色。First Beach是Quileute原住民部落的海滩，《暮光之城》的取景地。</div>
+        <div class="spot-card-highlight">亮点：海蚀柱+太平洋日落，住在海滩边的原住民度假村</div>
+      </div>
+    </div>
+    <div class="spot-card">
+      <img src="https://images.unsplash.com/photo-1502175353174-a7a70e73b362?w=800&q=80" alt="Space Needle">
+      <div class="spot-card-body">
+        <div class="spot-card-name">Space Needle 太空针塔</div>
+        <div class="spot-card-sub">Seattle, WA</div>
+        <div class="spot-card-desc">1962年世博会留下的西雅图地标。184米高空360度旋转观景台，天气好时能同时看到Rainier雪山、Olympic山脉和Puget Sound海湾。</div>
+        <div class="spot-card-highlight">亮点：西雅图的标志，旁边还有Chihuly玻璃艺术馆和MoPOP流行文化博物馆</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="color:#8b6f47; font-weight:400; letter-spacing:0.15em; margin:40px 0 16px;">旧金山 · 硅谷</h3>
+  <div class="spot-grid">
+    <div class="spot-card">
+      <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800&q=80" alt="Golden Gate Bridge">
+      <div class="spot-card-body">
+        <div class="spot-card-name">Golden Gate Bridge 金门大桥</div>
+        <div class="spot-card-sub">San Francisco</div>
+        <div class="spot-card-desc">旧金山的灵魂。国际橘色的悬索桥横跨金门海峡，经常被太平洋的雾气缠绕。迷雾中若隐若现的大桥，比晴天更震撼。从Battery Spencer山顶俯瞰是最佳拍照点。</div>
+        <div class="spot-card-highlight">亮点：迷雾中的大桥是旧金山最经典的画面，走路或骑车过桥体验最佳</div>
+      </div>
+    </div>
+    <div class="spot-card">
+      <img src="https://images.unsplash.com/photo-1575505586569-646b2ca898fc?w=800&q=80" alt="Alcatraz">
+      <div class="spot-card-body">
+        <div class="spot-card-name">Alcatraz Island 恶魔岛</div>
+        <div class="spot-card-sub">San Francisco Bay</div>
+        <div class="spot-card-desc">旧金山湾中的前联邦监狱。Night Tour是精髓——天黑后戴着耳机走在空荡的牢房走廊里，听真正的前囚犯和狱警用第一人称讲述日常和越狱故事。回程船上看旧金山夜景。</div>
+        <div class="spot-card-highlight">亮点：全球最佳语音导览之一，Night Tour比Day Tour氛围好十倍</div>
+      </div>
+    </div>
+    <div class="spot-card">
+      <img src="https://images.unsplash.com/photo-1587317671-3b2b9e500361?w=800&q=80" alt="Stanford">
+      <div class="spot-card-body">
+        <div class="spot-card-name">Stanford University 斯坦福大学</div>
+        <div class="spot-card-sub">Palo Alto, Silicon Valley</div>
+        <div class="spot-card-desc">硅谷的精神源头。黄色砂岩建筑+红瓦屋顶的Main Quad，Memorial Church的马赛克壁画。Google、HP、Instagram、Snapchat的创始人都从这里走出。有免费学生导游团。</div>
+        <div class="spot-card-highlight">亮点：CS圣地，校园本身就是景点，书店里的Stanford纪念品值得买</div>
+      </div>
+    </div>
+    <div class="spot-card">
+      <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&q=80" alt="Apple Park">
+      <div class="spot-card-body">
+        <div class="spot-card-name">Apple Park Visitor Center</div>
+        <div class="spot-card-sub">Cupertino, Silicon Valley</div>
+        <div class="spot-card-desc">唯一对外开放的硅谷科技大厂园区。AR体验可以看到完整的飞船总部全貌，楼顶露台远眺Apple Park。Apple独家周边商品只有这里能买到。</div>
+        <div class="spot-card-highlight">亮点：用iPad AR看飞船总部，买到别处没有的Apple Park限定商品</div>
+      </div>
+    </div>
+    <div class="spot-card">
+      <img src="https://images.unsplash.com/photo-1510614123581-f1e4e2439b17?w=800&q=80" alt="Napa Valley">
+      <div class="spot-card-body">
+        <div class="spot-card-name">Napa Valley 纳帕谷</div>
+        <div class="spot-card-sub">Napa County, California</div>
+        <div class="spot-card-desc">世界顶级葡萄酒产区。几百家酒庄散布在阳光充沛的山谷中，品一杯Cabernet Sauvignon，看连绵的葡萄园延伸到天际。春天正是葡萄藤发芽的季节，满眼新绿。</div>
+        <div class="spot-card-highlight">亮点：品酒+山谷田园风光，Opus One和Sterling是热门酒庄</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="color:#8b6f47; font-weight:400; letter-spacing:0.15em; margin:40px 0 16px;">优胜美地</h3>
+  <div class="spot-grid">
+    <div class="spot-card">
+      <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800&q=80" alt="Yosemite Valley">
+      <div class="spot-card-body">
+        <div class="spot-card-name">Yosemite Valley 优胜美地山谷</div>
+        <div class="spot-card-sub">Yosemite National Park</div>
+        <div class="spot-card-desc">地球上最壮观的冰川谷地之一。花岗岩绝壁垂直拔起千米，瀑布从崖顶飞泻而下。4月底雪水融化，Yosemite Falls水量达到全年最大，震耳欲聋。El Capitan的垂直岩壁是全球攀岩者的圣殿，Half Dome的弧形轮廓是美国国家公园的标志。</div>
+        <div class="spot-card-highlight">亮点：4-5月瀑布最壮观，Tunnel View是最经典的全景观景点</div>
+      </div>
+    </div>
+    <div class="spot-card">
+      <img src="https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?w=800&q=80" alt="Yosemite Falls">
+      <div class="spot-card-body">
+        <div class="spot-card-name">Yosemite Falls 优胜美地瀑布</div>
+        <div class="spot-card-sub">北美最高瀑布，落差739米</div>
+        <div class="spot-card-desc">三级瀑布总落差739米，是北美大陆最高的瀑布。4月的融雪季节，水量充沛到你站在谷底都能感受到水雾扑面。Sentinel Bridge上看瀑布倒映在Merced River中，是Yosemite最经典的画面。</div>
+        <div class="spot-card-highlight">亮点：4月水量最大，夏末可能断流，现在去正是最佳时机</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="color:#8b6f47; font-weight:400; letter-spacing:0.15em; margin:40px 0 16px;">一号公路</h3>
+  <div class="spot-grid">
+    <div class="spot-card">
+      <img src="https://images.unsplash.com/photo-1519922639192-e73293ca430e?w=800&q=80" alt="Big Sur">
+      <div class="spot-card-body">
+        <div class="spot-card-name">Big Sur 大苏尔</div>
+        <div class="spot-card-sub">California Highway 1</div>
+        <div class="spot-card-desc">全球最壮观的海岸公路段落。一侧是垂直坠入太平洋的悬崖，一侧是Santa Lucia山脉的峭壁。Bixby Creek Bridge是一号公路最具标志性的画面——混凝土拱桥横跨峡谷，下方是汹涌的白浪。经常有海雾弥漫，增添神秘感。</div>
+        <div class="spot-card-highlight">亮点：Bixby Bridge打卡，必须从北往南开（靠海一侧），不要赶夜路</div>
+      </div>
+    </div>
+    <div class="spot-card">
+      <img src="https://images.unsplash.com/photo-1545350536-8deb23b57a2e?w=800&q=80" alt="Monterey Bay Aquarium">
+      <div class="spot-card-body">
+        <div class="spot-card-name">Monterey Bay Aquarium</div>
+        <div class="spot-card-sub">Monterey, California</div>
+        <div class="spot-card-desc">全球最好的水族馆之一。镇馆之宝是两层楼高的巨型海藻森林缸——阳光穿过巨藻在水中摇曳，像海底教堂。还能看到海獭、水母、金枪鱼。紧邻我们住的洲际酒店。</div>
+        <div class="spot-card-highlight">亮点：巨型海藻森林缸，全球海洋保护研究的标杆机构</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="color:#8b6f47; font-weight:400; letter-spacing:0.15em; margin:40px 0 16px;">洛杉矶</h3>
+  <div class="spot-grid">
+    <div class="spot-card">
+      <img src="https://images.unsplash.com/photo-1534190760961-74e8c1c5c3da?w=800&q=80" alt="Griffith Observatory">
+      <div class="spot-card-body">
+        <div class="spot-card-name">Griffith Observatory 格里菲斯天文台</div>
+        <div class="spot-card-sub">Los Angeles</div>
+        <div class="spot-card-desc">洛杉矶的制高点。免费进入，傍晚去最好——看日落把城市染成金色，然后华灯初上，万家灯火铺展到地平线。远处能看到Hollywood标志。《爱乐之城》的取景地。</div>
+        <div class="spot-card-highlight">亮点：免费！傍晚日落+夜景是LA最美的画面，小红书上LA评价最高的景点</div>
+      </div>
+    </div>
+    <div class="spot-card">
+      <img src="https://images.unsplash.com/photo-1515861461-74f54ecc12c3?w=800&q=80" alt="Santa Monica">
+      <div class="spot-card-body">
+        <div class="spot-card-name">Santa Monica Beach</div>
+        <div class="spot-card-sub">Santa Monica, Los Angeles</div>
+        <div class="spot-card-desc">Route 66公路的终点。标志性的木质码头、摩天轮和太平洋日落。我们住的Proper Hotel就在旁边，每天傍晚走几步路就能看到太阳沉入太平洋。</div>
+        <div class="spot-card-highlight">亮点：Route 66终点标志打卡，太平洋日落，码头上的游乐场</div>
+      </div>
+    </div>
+    <div class="spot-card">
+      <img src="https://images.unsplash.com/photo-1580893246395-52aead8960dc?w=800&q=80" alt="Universal Studios">
+      <div class="spot-card-body">
+        <div class="spot-card-name">Universal Studios Hollywood</div>
+        <div class="spot-card-sub">Universal City, Los Angeles</div>
+        <div class="spot-card-desc">好莱坞电影的幕后世界。Studio Tour坐着电车穿越真实的电影拍摄现场和布景，哈利波特魔法世界还原了霍格沃茨和对角巷。变形金刚3D、侏罗纪公园都是经典项目。</div>
+        <div class="spot-card-highlight">亮点：Studio Tour全球独家（其他环球影城没有），哈利波特黄油啤酒必喝</div>
+      </div>
+    </div>
+    <div class="spot-card">
+      <img src="https://images.unsplash.com/photo-1597480499524-8b30ed7e6bbc?w=800&q=80" alt="Disneyland">
+      <div class="spot-card-body">
+        <div class="spot-card-name">Disneyland Park</div>
+        <div class="spot-card-sub">Anaheim, Los Angeles</div>
+        <div class="spot-card-desc">全球第一座迪士尼乐园，1955年华特·迪士尼亲手创建。睡美人城堡是所有迪士尼城堡的原型。Park Hopper通票可以在Disneyland Park和California Adventure之间自由穿梭。</div>
+        <div class="spot-card-highlight">亮点：全球迪士尼的"始祖"，Cars Land和Avengers Campus在California Adventure</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 宣化上人道场 ============ -->
+
+<div class="section">
+  <div class="section-title">捌 · 宣化上人道场</div>
+
+  <p style="font-size:0.95rem; color:#5c4a36; line-height:2; margin-bottom:24px;">
+    宣化上人（1918-1995），东北吉林双城人，禅宗沩仰宗第九代传人。1962年从香港只身赴美弘法，是将正法佛教带入西方世界的先驱。他在美国创立了法界佛教总会（DRBA），建立了万佛圣城、金山圣寺、金轮圣寺等道场，翻译了大量佛经为英文，培养了第一批美国出家人。他主张"冻死不攀缘，饿死不化缘，穷死不求缘"，一生持戒严谨，被誉为近代禅宗大德。
+  </p>
+
+  <div class="temple-card">
+    <div class="temple-card-name">金山圣寺</div>
+    <div class="temple-card-en">Gold Mountain Sagely Monastery &nbsp;·&nbsp; San Francisco</div>
+    <div class="temple-card-desc">
+      位于旧金山Chinatown的心脏地带。1970年成为美国最早的中国佛教寺院之一，宣化上人在此开始了美国弘法事业。寺内设有佛堂、讲堂、图书馆，定期举办禅修、诵经和佛学讲座。对所有人开放，可以静坐、礼佛、或旁听法会。
+    </div>
+    <div class="temple-card-info">
+      地址：800 Sacramento Street, San Francisco, CA 94108<br>
+      电话：(415) 421-6117<br>
+      官网：goldmountainmonastery.org<br>
+      提示：就在Chinatown里，4/25逛唐人街时可以顺路拜访
+    </div>
+  </div>
+
+  <div class="temple-card">
+    <div class="temple-card-name">金轮圣寺</div>
+    <div class="temple-card-en">Gold Wheel Sagely Monastery &nbsp;·&nbsp; Los Angeles</div>
+    <div class="temple-card-desc">
+      1975年由宣化上人创建，1990年迁至现址（一座改建的老教堂）。是法界佛教总会在南加州的核心道场。定期举办地藏经诵持、禅修、佛学班等活动。环境清净庄严，远离洛杉矶的喧嚣。
+    </div>
+    <div class="temple-card-info">
+      地址：235 North Avenue 58, Los Angeles, CA 90042<br>
+      电话：(323) 258-6668<br>
+      官网：goldwheel.org<br>
+      提示：在LA的Highland Park社区，从Santa Monica开车约30分钟
+    </div>
+  </div>
+</div>
+
 <!-- ============ 费用 ============ -->
 
 <div class="section">
-  <div class="section-title">柒 · 费用</div>
+  <div class="section-title">玖 · 费用</div>
 
   <table class="cost-table">
     <tr><th>类别</th><th style="text-align:right">金额</th></tr>
@@ -487,7 +790,7 @@
 <!-- ============ 游记占位 ============ -->
 
 <div class="section">
-  <div class="section-title">捌 · 游记</div>
+  <div class="section-title">拾 · 游记</div>
   <div class="journal-placeholder">
     旅程尚未开始<br>
     这里将记录路上的文字、感悟与故事<br>
@@ -496,7 +799,7 @@
 </div>
 
 <div class="section">
-  <div class="section-title">玖 · 影像</div>
+  <div class="section-title">拾壹 · 影像</div>
   <div class="photo-grid">
     <div class="photo-placeholder">Olympic 温带雨林</div>
     <div class="photo-placeholder">First Beach 日落</div>
