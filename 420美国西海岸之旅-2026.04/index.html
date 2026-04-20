@@ -412,6 +412,82 @@
     margin-top: 20px;
   }
 
+  /* Journal list */
+  .journal-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .journal-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #fff;
+    padding: 18px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #e8f0e3;
+  }
+
+  .journal-card:not(.journal-placeholder):hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 20px rgba(124, 154, 106, 0.15);
+    border-color: #c5dcc0;
+  }
+
+  .journal-day {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #7c9a6a;
+    background: #e8f0e3;
+    padding: 5px 10px;
+    border-radius: 20px;
+    min-width: 52px;
+    text-align: center;
+  }
+
+  .journal-info {
+    flex: 1;
+  }
+
+  .journal-date {
+    font-size: 0.82rem;
+    color: #b8a690;
+    letter-spacing: 0.05em;
+  }
+
+  .journal-title {
+    font-size: 1rem;
+    color: #2c3e2d;
+    font-weight: 500;
+    margin-top: 2px;
+  }
+
+  .journal-arrow {
+    color: #a8c9a2;
+    font-size: 1.1rem;
+    transition: transform 0.2s, color 0.2s;
+  }
+
+  .journal-card:not(.journal-placeholder):hover .journal-arrow {
+    color: #7c9a6a;
+    transform: translateX(3px);
+  }
+
+  .journal-placeholder {
+    opacity: 0.6;
+    cursor: default;
+  }
+
+  .journal-placeholder .journal-title {
+    color: #aaa;
+  }
+
   footer {
     text-align: center;
     margin-top: 80px;
@@ -1103,14 +1179,34 @@
   </p>
 </div>
 
-<!-- ============ 游记占位 ============ -->
+<!-- ============ 游记列表 ============ -->
 
 <div class="section">
-  <div class="section-title">玖 · 游记</div>
-  <div class="journal-placeholder">
-    旅程尚未开始<br>
-    这里将记录路上的文字、感悟与故事<br>
-    <span style="font-size: 0.82rem; color: #ccc;">待旅途归来后更新</span>
+  <div class="section-title">玖 · 旅行记录</div>
+  <div class="journal-list">
+    <a class="journal-card" href="../2026-04-18-Day1-%E9%A6%96%E5%B0%94%E5%87%BA%E5%8F%91%E4%B8%8E%E6%A2%A8%E5%A4%A7/">
+      <div class="journal-day">Day 1</div>
+      <div class="journal-info">
+        <div class="journal-date">4月18日 · 首尔</div>
+        <div class="journal-title">出发与梨花女子大学</div>
+      </div>
+      <div class="journal-arrow">→</div>
+    </a>
+    <a class="journal-card" href="../2026-04-19-Day2-%E9%A6%96%E5%B0%94%E5%8D%9A%E7%89%A9%E9%A6%86%E4%B8%8E%E7%BE%8E%E9%A3%9F/">
+      <div class="journal-day">Day 2</div>
+      <div class="journal-info">
+        <div class="journal-date">4月19日 · 首尔</div>
+        <div class="journal-title">博物馆与美食</div>
+      </div>
+      <div class="journal-arrow">→</div>
+    </a>
+    <div class="journal-card journal-placeholder">
+      <div class="journal-day">Day 3</div>
+      <div class="journal-info">
+        <div class="journal-date">4月20日 · 西雅图</div>
+        <div class="journal-title">西雅图到达</div>
+      </div>
+    </div>
   </div>
 </div>
 
