@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3 · 西雅图到达 | 2026年4月20日</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f6f8fa;
+            --card: #ffffff;
+            --text: #1a2b3c;
+            --muted: #7a8fa6;
+            --accent: #4a7c9b;
+            --border: #dde4ed;
+            --shadow: rgba(74, 124, 155, 0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.9;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 60px 24px 40px;
+            background: linear-gradient(180deg, #e8f0f5 0%, var(--bg) 100%);
+        }
+
+        .route-line {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+
+        .route-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        .route-city {
+            font-size: 0.88rem;
+            color: var(--muted);
+            letter-spacing: 0.15em;
+        }
+
+        .route-arrow {
+            color: #b0c4d8;
+            font-size: 1rem;
+        }
+
+        h1 {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            color: var(--text);
+            letter-spacing: 0.1em;
+            margin-bottom: 8px;
+        }
+
+        .date-line {
+            font-size: 0.85rem;
+            color: var(--muted);
+            letter-spacing: 0.2em;
+        }
+
+        /* Container */
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 24px 80px;
+        }
+
+        /* Intro */
+        .intro {
+            background: var(--card);
+            border-radius: 16px;
+            padding: 36px 40px;
+            margin: 32px 0;
+            box-shadow: 0 2px 16px var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        .intro p {
+            font-size: 1rem;
+            color: #4a5568;
+            line-height: 2;
+        }
+
+        .highlight {
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        /* Section title */
+        .section-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: var(--accent);
+            letter-spacing: 0.2em;
+            margin: 48px 0 24px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        /* Photo grid */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+
+        .photo-card {
+            background: var(--card);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px var(--shadow);
+            border: 1px solid var(--border);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            cursor: pointer;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(74, 124, 155, 0.18);
+        }
+
+        .photo-card img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            display: block;
+        }
+
+        .photo-info {
+            padding: 14px 16px;
+        }
+
+        .photo-scene {
+            font-size: 0.78rem;
+            color: var(--accent);
+            letter-spacing: 0.1em;
+            margin-bottom: 4px;
+        }
+
+        .photo-desc {
+            font-size: 0.85rem;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        /* Reflection */
+        .reflection {
+            background: var(--card);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 2px 16px var(--shadow);
+            border: 1px solid var(--border);
+            text-align: center;
+            margin: 48px 0;
+        }
+
+        .reflection-quote {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.15rem;
+            color: var(--text);
+            line-height: 2.2;
+            font-style: italic;
+        }
+
+        .reflection-sign {
+            margin-top: 24px;
+            font-size: 0.82rem;
+            color: var(--muted);
+            letter-spacing: 0.15em;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 24px;
+            font-size: 0.8rem;
+            color: var(--muted);
+            letter-spacing: 0.1em;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.92);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .lightbox.active { display: flex; }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        .lightbox-caption {
+            color: rgba(255,255,255,0.7);
+            margin-top: 16px;
+            font-size: 0.9rem;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px; right: 30px;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            opacity: 0.7;
+        }
+
+        .lightbox-close:hover { opacity: 1; }
+
+        @media (max-width: 600px) {
+            .photo-grid { grid-template-columns: 1fr; }
+            .intro { padding: 24px 20px; }
+            .reflection { padding: 28px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="route-line">
+        <span class="route-city">北京</span>
+        <span class="route-arrow">→</span>
+        <span class="route-city">首尔</span>
+        <span class="route-dot"></span>
+        <span class="route-dot"></span>
+        <span class="route-dot"></span>
+        <span class="route-arrow">→</span>
+        <span class="route-city">温哥华</span>
+        <span class="route-arrow">→</span>
+        <span class="route-city highlight">西雅图</span>
+    </div>
+    <h1>西雅图到达</h1>
+    <p class="date-line">2026年4月20日 · Day 3</p>
+</header>
+
+<div class="container">
+
+    <div class="intro">
+        <p>
+            从首尔金浦飞温哥华，在这座加拿大西海岸的城市等了<span class="highlight">六个小时</span>。
+            中午在Tim Hortons旁边的小餐厅吃了一份披萨，喝了杯咖啡，看窗外飞机起落。
+            温哥华的远山还有雪，阳光很好但风很凉。
+            下午登上飞往西雅图的航班，傍晚落地——美国，终于到了。
+        </p>
+    </div>
+
+    <div class="section-title">叁 · 温哥华候机</div>
+
+    <div class="photo-grid">
+        <div class="photo-card" onclick="openLightbox(this)">
+            <img src="images/vino-volo-restaurant.jpg" alt="Vino Volo Restaurant">
+            <div class="photo-info">
+                <div class="photo-scene">Vino Volo · 温哥华机场</div>
+                <div class="photo-desc">木质藤架下的Wine Bar，候机时光在这里慢了下来</div>
+            </div>
+        </div>
+        <div class="photo-card" onclick="openLightbox(this)">
+            <img src="images/vancouver-tim-hortons.jpg" alt="Vancouver Terminal">
+            <div class="photo-info">
+                <div class="photo-scene">E85登机口 · 温哥华机场</div>
+                <div class="photo-desc">Tim Hortons的红杯子，加拿大的国民咖啡。六小时，就在这里消磨</div>
+            </div>
+        </div>
+        <div class="photo-card" onclick="openLightbox(this)">
+            <img src="images/vancouver-window-mountains.jpg" alt="Vancouver Mountains">
+            <div class="photo-info">
+                <div class="photo-scene">候机厅窗边 · 温哥华机场</div>
+                <div class="photo-desc">融雪的远山，蓝色天空与停机坪的灰。等待，其实也是旅行的一部分</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="reflection">
+        <p class="reflection-quote">
+            候机的六个小时，没有焦虑，反而有一种奇怪的平静。<br>
+            窗外的雪山像是另一个世界的提醒——<br>
+            目的地越来越近了。
+        </p>
+        <p class="reflection-sign">于温哥华飞西雅图的航班上</p>
+    </div>
+
+</div>
+
+<footer>
+    <a href="../420%E7%BE%8E%E5%9B%BD%E8%A5%BF%E6%B5%B7%E5%B2%B8%E4%B9%8B%E6%97%85-2026.04/">&larr; 420美国西海岸之旅</a>
+</footer>
+
+<div class="lightbox" id="lightbox">
+    <span class="lightbox-close" onclick="closeLightbox()">×</span>
+    <img id="lightbox-img" src="" alt="">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+</div>
+
+<script>
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const lightboxCaption = document.getElementById('lightbox-caption');
+
+function openLightbox(card) {
+    const img = card.querySelector('img');
+    const scene = card.querySelector('.photo-scene').textContent;
+    const desc = card.querySelector('.photo-desc').textContent;
+    lightboxImg.src = img.src;
+    lightboxCaption.textContent = scene + ' · ' + desc;
+    lightbox.classList.add('active');
+}
+
+function closeLightbox() {
+    lightbox.classList.remove('active');
+}
+
+lightbox.addEventListener('click', function(e) {
+    if (e.target === lightbox) closeLightbox();
+});
+</script>
+
+</body>
+</html>
