@@ -2,11 +2,12 @@
   "photos_analyzed": [
     "stanford-pigott-01.jpg",
     "stanford-hoover-01.jpg",
-    "stanford-oldunion-01.jpg"
+    "stanford-oldunion-01.jpg",
+    "stanford-memorialauditorium-01.jpg"
   ],
   "photos_md_done": true,
-  "index_html_done": true,
+  "index_html_done": false,
   "git_committed": true,
-  "last_run": "generate_daily_journal.py",
+  "last_run": "manual_add",
   "last_error": null
 }
