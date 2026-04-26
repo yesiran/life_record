@@ -8,8 +8,8 @@
     "stanford-selfie-01.jpg"
   ],
   "photos_md_done": true,
-  "index_html_done": false,
+  "index_html_done": true,
   "git_committed": true,
-  "last_run": "manual_add",
+  "last_run": "generate_daily_journal.py",
   "last_error": null
 }

@@ -9,8 +9,8 @@
     "snoqualmie-falls-05.jpg"
   ],
   "photos_md_done": true,
-  "index_html_done": false,
-  "git_committed": false,
+  "index_html_done": true,
+  "git_committed": true,
   "last_run": "generate_daily_journal.py",
   "last_error": null,
   "pending_photos": []
