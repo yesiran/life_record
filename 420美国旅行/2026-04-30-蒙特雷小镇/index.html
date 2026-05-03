@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>蒙特雷小镇 · 420美国旅行</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+  background: #faf8f5;
+  color: #2c2c2c;
+  line-height: 1.9;
+  padding: 60px 20px 80px;
+}
+.wrap { max-width: 720px; margin: 0 auto; }
+.crumbs {
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 32px;
+  letter-spacing: 1px;
+}
+.crumbs a { color: #888; text-decoration: none; }
+.crumbs a:hover { color: #555; }
+h1 {
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+.meta {
+  font-size: 13px;
+  color: #999;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+.narrative {
+  font-size: 16px;
+  line-height: 2.0;
+  color: #333;
+  text-indent: 2em;
+  margin-bottom: 56px;
+  padding: 0 4px;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+@media (min-width: 720px) {
+  .gallery { grid-template-columns: repeat(3, 1fr); }
+}
+.photo {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  cursor: zoom-in;
+  display: flex;
+  flex-direction: column;
+}
+.photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s;
+}
+.photo:hover img { transform: scale(1.02); }
+.photo .caption {
+  padding: 12px 14px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #555;
+  font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+}
+.photo .caption .t {
+  font-weight: 600;
+  color: #2c2c2c;
+  display: block;
+  margin-bottom: 2px;
+}
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.92);
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+  padding: 20px;
+}
+.lightbox.show { display: flex; }
+.lightbox img {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  box-shadow: 0 8px 60px rgba(0,0,0,0.5);
+}
+.footer {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 12px;
+  color: #ccc;
+  letter-spacing: 2px;
+}
+.footer a { color: #999; text-decoration: none; }
+.footer a:hover { color: #555; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="crumbs">
+    <a href="../../">一叶琳旅程</a>
+    &nbsp;&middot;&nbsp;
+    <a href="../">420美国旅行</a>
+  </div>
+  <h1>蒙特雷小镇</h1>
+  <div class="meta">2026-04-30  &middot;  共 6 张</div>
+  <div class="narrative">2026年4月30日，蒙特雷小镇的这一天，像一首轻柔的歌谣，在记忆里缓缓流淌。清晨，渔人码头的海风带着淡淡的咸味拂过脸庞，我们三人站在海湾雕塑前，笑容灿烂得像被阳光镀上了一层金边，那份共享的旅途喜悦，至今想来仍觉温暖。白日里的喧嚣渐渐隐去，夜色温柔地降临，抬头望去，皎洁的月光穿透薄云，为婆娑的树影描摹出柔和的轮廓，海边小径上的灯火也随之亮起，一派静谧安详。
+
+而白天的某个时刻，也曾有阴云笼罩着海湾，我站在那里，透过那架静候的望远镜，远方的小屋与棕榈树显得格外遥远，却又透着一种沉静的力量。夜幕深沉后，我们探访旧渔人坊，意外撞见那栩栩如生的海盗雕像，忍不住上前合影，平添了几分探险的趣味。一天中最温馨的时刻，莫过于华灯初上，朋友们围坐餐桌，暖黄的灯光洒在每个人脸上，笑语盈盈，侍者热情地穿梭其中，那一刻的欢聚，让所有疲惫都消散在杯盏交错间，只留下心底最柔软的触动。</div>
+  <div class="gallery">
+    <figure class="photo"><img src="images/2026-04-30-%E8%92%99%E7%89%B9%E9%9B%B7%E5%B0%8F%E9%95%87-01.jpg" alt="渔人码头" loading="lazy"><figcaption class="caption"><span class="t">渔人码头</span>海湾雕塑前，三人笑容灿烂，海风拂面，共享旅途美好时光。</figcaption></figure><figure class="photo"><img src="images/2026-04-30-%E8%92%99%E7%89%B9%E9%9B%B7%E5%B0%8F%E9%95%87-02.jpg" alt="静夜月华" loading="lazy"><figcaption class="caption"><span class="t">静夜月华</span>皎洁明月穿透薄云，树影婆娑，夜色静谧。</figcaption></figure><figure class="photo"><img src="images/2026-04-30-%E8%92%99%E7%89%B9%E9%9B%B7%E5%B0%8F%E9%95%87-03.jpg" alt="月夜小径" loading="lazy"><figcaption class="caption"><span class="t">月夜小径</span>月光穿云，海边小径灯火暖，树影婆娑，夜色静好。</figcaption></figure><figure class="photo"><img src="images/2026-04-30-%E8%92%99%E7%89%B9%E9%9B%B7%E5%B0%8F%E9%95%87-04.jpg" alt="滨海之眼" loading="lazy"><figcaption class="caption"><span class="t">滨海之眼</span>阴云笼罩海湾，望远镜静候，远方小屋与棕榈树，宁静致远。</figcaption></figure><figure class="photo"><img src="images/2026-04-30-%E8%92%99%E7%89%B9%E9%9B%B7%E5%B0%8F%E9%95%87-05.jpg" alt="奇遇海盗" loading="lazy"><figcaption class="caption"><span class="t">奇遇海盗</span>夜访旧渔人坊，与逼真海盗雕像合影，别有风情。</figcaption></figure><figure class="photo"><img src="images/2026-04-30-%E8%92%99%E7%89%B9%E9%9B%B7%E5%B0%8F%E9%95%87-06.jpg" alt="欢聚时光" loading="lazy"><figcaption class="caption"><span class="t">欢聚时光</span>暖黄灯光下，朋友们围坐餐桌，笑语盈盈，侍者热情招呼，共享温馨</figcaption></figure>
+  </div>
+  <div class="footer">
+    <a href="../">← 返回 420美国旅行</a>
+  </div>
+</div>
+<div class="lightbox"><img src="" alt=""></div>
+<script>
+(function(){
+  var box = document.querySelector('.lightbox');
+  var img = box.querySelector('img');
+  document.querySelectorAll('.photo img').forEach(function(el){
+    el.addEventListener('click', function(){
+      img.src = el.src;
+      box.classList.add('show');
+    });
+  });
+  box.addEventListener('click', function(){ box.classList.remove('show'); });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') box.classList.remove('show');
+  });
+})();
+</script>
+</body>
+</html>
